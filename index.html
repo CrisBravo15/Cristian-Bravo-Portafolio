@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu Nombre | Desarrollo Web</title>
+  <meta name="description" content="Portafolio de páginas web para negocios locales en Monterrey.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#inicio">Tu Nombre</a>
+      <ul>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio">
+      <h1>Desarrollo de páginas web para negocios</h1>
+      <p>Descripción breve de lo que haces y para quién.</p>
+      <a href="#contacto">Cotizar proyecto</a>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+
+      <article>
+        <img src="img/proyecto-1.jpg" alt="Captura de la página de Proyecto 1" loading="lazy">
+        <h3>Nombre del proyecto</h3>
+        <p>Tipo de negocio · Qué se resolvió.</p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <a href="https://ejemplo.com" target="_blank" rel="noopener">Ver sitio</a>
+      </article>
+
+      <!-- Duplicar <article> por cada proyecto -->
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <ul>
+        <li>
+          <h3>Página de presentación</h3>
+          <p>Descripción y alcance.</p>
+        </li>
+        <li>
+          <h3>Tienda en línea</h3>
+          <p>Descripción y alcance.</p>
+        </li>
+        <li>
+          <h3>Mantenimiento</h3>
+          <p>Descripción y alcance.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Quién eres, tu experiencia y cómo trabajas.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form action="https://formspree.io/f/TU_ID" method="POST">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" required>
+
+        <label for="correo">Correo</label>
+        <input id="correo" name="correo" type="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <p>
+        <a href="https://wa.me/52XXXXXXXXXX">WhatsApp</a> ·
+        <a href="https://github.com/usuario">GitHub</a> ·
+        <a href="mailto:correo@ejemplo.com">Correo</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Tu Nombre</p>
+  </footer>
+
+</body>
+</html>
