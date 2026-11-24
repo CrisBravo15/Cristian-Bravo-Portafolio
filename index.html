@@ -1,101 +1,596 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nova Web | Desarrollo Web</title>
-  <meta name="description" content="Portafolio de páginas web para negocios locales en Monterrey.">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova Web | Agencia Digital & Desarrollo Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <header>
-    <nav>
-      <a href="#inicio">Tu Nombre</a>
-      <ul>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+  <!-- NAVEGACIÓN -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand" aria-label="Nova Web Inicio">
+        <svg class="brand-logo" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="novaBlueGrad" x1="15" y1="115" x2="195" y2="35" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#1B54C6" />
+              <stop offset="50%" stop-color="#29ABE2" />
+              <stop offset="100%" stop-color="#1B54C6" />
+            </linearGradient>
+          </defs>
+          <!-- Píxeles superiores -->
+          <rect x="136" y="14" width="9" height="9" fill="#0A0B0D" />
+          <rect x="150" y="21" width="7" height="7" fill="#0A0B0D" />
+          <rect x="166" y="16" width="8" height="8" fill="#0A0B0D" />
+          <rect x="145" y="33" width="8" height="8" fill="#0A0B0D" />
+          <rect x="158" y="30" width="9" height="9" fill="#0A0B0D" />
+          <rect x="162" y="45" width="9" height="9" fill="#0A0B0D" />
+          <!-- Nube negra -->
+          <path
+            d="M55 104C38 104 26 91 26 75C26 60 37 48 51 46C56 31 70 21 87 21C107 21 124 35 127 54C131 53 135 53 139 54C152 57 161 68 161 81C161 94 150 104 136 104H55Z"
+            fill="#0A0B0D" />
+          <!-- Cinta ribbon degradada -->
+          <path
+            d="M46 112C24 108 12 88 18 66C23 48 39 36 57 35C65 20 82 12 100 15C116 18 128 29 133 43C124 34 111 28 97 27C78 25 61 36 55 53C40 55 29 67 29 82C29 96 39 107 52 110L46 112Z"
+            fill="url(#novaBlueGrad)" />
+          <path
+            d="M35 107C56 117 81 112 97 94L113 76C125 62 145 58 161 67C173 74 179 88 175 101C172 110 164 117 154 119C169 120 183 111 188 96C194 78 184 58 166 51C144 43 120 50 105 67L89 85C75 101 52 106 33 98L35 107Z"
+            fill="url(#novaBlueGrad)" />
+          <!-- Cursor blanco con relleno negro -->
+          <path d="M153 75L193 96L175 102L184 120L174 125L165 107L153 119V75Z" fill="#0A0B0D" stroke="#FFFFFF"
+            stroke-width="3.5" stroke-linejoin="round" />
+        </svg>
+        <span class="brand-text">Nova <span>Web</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto" class="btn btn-primary btn-sm">Cotizar Proyecto</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
 
-  <main>
+  <!-- HERO SECTION -->
+  <section class="hero" id="inicio">
+    <canvas id="heroCanvas"></canvas>
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          AGENCIA DE DESARROLLO WEB &amp; ESTRATEGIA DIGITAL
+        </div>
+        <h1>Impulsamos tu marca hacia la <span class="text-gradient">nueva era digital</span></h1>
+        <p class="hero-desc">
+          En <strong>Nova Web</strong> diseñamos y desarrollamos sitios web de alto impacto, tiendas en línea y sistemas
+          digitales a la medida que convierten visitantes en clientes reales.
+        </p>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn btn-primary">Iniciar mi proyecto</a>
+          <a href="#portafolio" class="btn btn-outline">Ver portafolio</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric">
+            <strong>+120</strong>
+            <span>Proyectos entregados</span>
+          </div>
+          <div class="metric">
+            <strong>99.9%</strong>
+            <span>Uptime garantizado</span>
+          </div>
+          <div class="metric">
+            <strong>100%</strong>
+            <span>Diseño responsivo</span>
+          </div>
+        </div>
+      </div>
 
-    <section id="inicio">
-      <h1>Desarrollo de páginas web para negocios</h1>
-      <p>Descripción breve de lo que haces y para quién.</p>
-      <a href="#contacto">Cotizar proyecto</a>
-    </section>
+      <div class="hero-visual reveal">
+        <div class="hero-card-stack">
+          <div class="code-window">
+            <div class="window-header">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="window-title">novaweb.cloud — arquitectura</span>
+            </div>
+            <div class="window-body">
+              <div class="logo-showcase">
+                <svg class="hero-svg-logo" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="heroLogoGrad" x1="15" y1="115" x2="195" y2="35" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#1B54C6" />
+                      <stop offset="50%" stop-color="#29ABE2" />
+                      <stop offset="100%" stop-color="#1B54C6" />
+                    </linearGradient>
+                  </defs>
+                  <rect class="px-float-1" x="136" y="14" width="9" height="9" fill="#FFFFFF" />
+                  <rect class="px-float-2" x="150" y="21" width="7" height="7" fill="#29ABE2" />
+                  <rect class="px-float-3" x="166" y="16" width="8" height="8" fill="#FFFFFF" />
+                  <rect class="px-float-2" x="145" y="33" width="8" height="8" fill="#29ABE2" />
+                  <rect class="px-float-1" x="158" y="30" width="9" height="9" fill="#FFFFFF" />
+                  <rect class="px-float-3" x="162" y="45" width="9" height="9" fill="#29ABE2" />
+                  <path
+                    d="M55 104C38 104 26 91 26 75C26 60 37 48 51 46C56 31 70 21 87 21C107 21 124 35 127 54C131 53 135 53 139 54C152 57 161 68 161 81C161 94 150 104 136 104H55Z"
+                    fill="#0A0B0D" stroke="#29ABE2" stroke-width="1.5" />
+                  <path
+                    d="M46 112C24 108 12 88 18 66C23 48 39 36 57 35C65 20 82 12 100 15C116 18 128 29 133 43C124 34 111 28 97 27C78 25 61 36 55 53C40 55 29 67 29 82C29 96 39 107 52 110L46 112Z"
+                    fill="url(#heroLogoGrad)" />
+                  <path
+                    d="M35 107C56 117 81 112 97 94L113 76C125 62 145 58 161 67C173 74 179 88 175 101C172 110 164 117 154 119C169 120 183 111 188 96C194 78 184 58 166 51C144 43 120 50 105 67L89 85C75 101 52 106 33 98L35 107Z"
+                    fill="url(#heroLogoGrad)" />
+                  <path class="cursor-anim" d="M153 75L193 96L175 102L184 120L174 125L165 107L153 119V75Z"
+                    fill="#0A0B0D" stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round" />
+                </svg>
+                <div class="showcase-title">Nova Web</div>
+                <div class="showcase-sub">Cloud • Código • Conversión</div>
+              </div>
+              <div class="status-bars">
+                <div class="status-item">
+                  <span>Velocidad de carga (Core Web Vitals)</span>
+                  <span>99/100</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 99%"></div>
+                </div>
+                <div class="status-item">
+                  <span>Optimización SEO Técnico</span>
+                  <span>100%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="proyectos">
-      <h2>Proyectos</h2>
+  <!-- POR QUÉ NOVA WEB -->
+  <section class="section section-light" id="nosotros">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">POR QUÉ ELEGIRNOS</span>
+        <h2>Tecnología sólida con identidad propia</h2>
+        <p>Combinamos ingeniería web limpia, diseño estratégico y arquitectura en la nube para que tu negocio destaque
+          con autoridad.</p>
+      </div>
 
-      <article>
-        <img src="img/proyecto-1.jpg" alt="Captura de la página de Proyecto 1" loading="lazy">
-        <h3>Nombre del proyecto</h3>
-        <p>Tipo de negocio · Qué se resolvió.</p>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-        <a href="https://ejemplo.com" target="_blank" rel="noopener">Ver sitio</a>
-      </article>
+      <div class="features-grid">
+        <article class="feature-card reveal">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h3>Desarrollo a la Medida</h3>
+          <p>Código limpio, escalable y optimizado sin plantillas pesadas que frenen el rendimiento de tu plataforma.
+          </p>
+        </article>
 
-      <!-- Duplicar <article> por cada proyecto -->
-    </section>
+        <article class="feature-card reveal">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+            </svg>
+          </div>
+          <h3>Infraestructura Cloud</h3>
+          <p>Despliegue en servidores de alta disponibilidad con certificados SSL, copias de seguridad y velocidad
+            global.</p>
+        </article>
 
-    <section id="servicios">
-      <h2>Servicios</h2>
-      <ul>
-        <li>
-          <h3>Página de presentación</h3>
-          <p>Descripción y alcance.</p>
-        </li>
-        <li>
-          <h3>Tienda en línea</h3>
-          <p>Descripción y alcance.</p>
-        </li>
-        <li>
-          <h3>Mantenimiento</h3>
-          <p>Descripción y alcance.</p>
-        </li>
-      </ul>
-    </section>
+        <article class="feature-card reveal">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"></path>
+              <path d="M13 13l6 6"></path>
+            </svg>
+          </div>
+          <h3>Enfoque en Conversión</h3>
+          <p>Cada botón, sección y flujo de navegación está pensado para guiar al usuario hacia el contacto o la compra.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Quién eres, tu experiencia y cómo trabajas.</p>
-    </section>
+  <!-- SERVICIOS -->
+  <section class="section section-dark" id="servicios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">SOLUCIONES DIGITALES</span>
+        <h2>Nuestros Servicios</h2>
+        <p>Todo lo que tu empresa necesita para construir, escalar y consolidar su presencia en internet.</p>
+      </div>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <form action="https://formspree.io/f/TU_ID" method="POST">
-        <label for="nombre">Nombre</label>
-        <input id="nombre" name="nombre" type="text" required>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-num">01</span>
+          <h3>Diseño &amp; Desarrollo Web</h3>
+          <p>Sitios corporativos y landing pages modernas, rápidas y adaptadas a cualquier pantalla.</p>
+          <ul>
+            <li>Arquitectura UI/UX personalizada</li>
+            <li>Optimización móvil First</li>
+            <li>Integración con WhatsApp y CRM</li>
+          </ul>
+        </div>
 
-        <label for="correo">Correo</label>
-        <input id="correo" name="correo" type="email" required>
+        <div class="service-card reveal">
+          <span class="service-num">02</span>
+          <h3>Tiendas en Línea (E-Commerce)</h3>
+          <p>Plataformas de comercio electrónico listas para vender 24/7 con pasarelas de pago seguras.</p>
+          <ul>
+            <li>Carrito de compras optimizado</li>
+            <li>Gestión de inventario y envíos</li>
+            <li>Pagos con tarjeta, transferencia y más</li>
+          </ul>
+        </div>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <div class="service-card reveal">
+          <span class="service-num">03</span>
+          <h3>Sistemas Web &amp; Cloud</h3>
+          <p>Aplicaciones web a medida, paneles administrativos, bases de datos y automatización de procesos.</p>
+          <ul>
+            <li>Dashboards y reportes en tiempo real</li>
+            <li>APIs e integraciones externas</li>
+            <li>Seguridad y control de accesos</li>
+          </ul>
+        </div>
 
-        <button type="submit">Enviar</button>
+        <div class="service-card reveal">
+          <span class="service-num">04</span>
+          <h3>Posicionamiento SEO</h3>
+          <p>Optimizamos la estructura técnica y el contenido de tu sitio para destacar en los primeros resultados de
+            Google.</p>
+          <ul>
+            <li>Auditoría técnica y velocidad</li>
+            <li>Estrategia de palabras clave</li>
+            <li>Indexación y datos estructurados</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-num">05</span>
+          <h3>Branding &amp; Identidad Digital</h3>
+          <p>Construimos la identidad visual de tu marca para proyectar profesionalismo y confianza inmediata.</p>
+          <ul>
+            <li>Diseño de logotipo y manual de marca</li>
+            <li>Sistema gráfico para redes sociales</li>
+            <li>Papelería y activos digitales</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-num">06</span>
+          <h3>Mantenimiento &amp; Soporte</h3>
+          <p>Monitoreo continuo, actualizaciones de seguridad y respaldo preventivo para que nunca te detengas.</p>
+          <ul>
+            <li>Soporte técnico prioritario</li>
+            <li>Backups automatizados en la nube</li>
+            <li>Actualización de contenidos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO DE TRABAJO -->
+  <section class="section section-light" id="proceso">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">METODOLOGÍA NOVA WEB</span>
+        <h2>De la idea al lanzamiento en 4 pasos</h2>
+        <p>Un flujo transparente y ágil para garantizar entregas puntuales y resultados medibles.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="step-circle">1</div>
+          <h3>Descubrimiento</h3>
+          <p>Analizamos tu negocio, objetivos, competencia y requerimientos técnicos para trazar la ruta ideal.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-circle">2</div>
+          <h3>Diseño UI/UX</h3>
+          <p>Prototipamos la estructura visual con la identidad de tu marca enfocada en la experiencia del usuario.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-circle">3</div>
+          <h3>Desarrollo &amp; QA</h3>
+          <p>Programamos el sitio con estándares modernos y realizamos pruebas de velocidad, seguridad y dispositivos.
+          </p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-circle">4</div>
+          <h3>Despliegue Cloud</h3>
+          <p>Publicamos tu plataforma en producción, configuramos dominio, SSL y métricas para impulsar tu crecimiento.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTAFOLIO -->
+  <section class="section section-gray" id="portafolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">PROYECTOS RECIENTES</span>
+        <h2>Portafolio Destacado</h2>
+        <p>Explora algunos ejemplos de soluciones digitales desarrolladas bajo nuestros estándares de calidad.</p>
+      </div>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="web">Sitios Web</button>
+        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="sistema">Sistemas Cloud</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <article class="project-card reveal" data-category="web">
+          <div class="project-preview preview-1">
+            <div class="browser-mock">
+              <div class="mock-bar"><span></span><span></span><span></span></div>
+              <div class="mock-content">
+                <div class="mock-pill"></div>
+                <div class="mock-line w-80"></div>
+                <div class="mock-line w-60"></div>
+                <div class="mock-cta"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Sitio Corporativo</span>
+            <h3>Corporativo Industrial del Norte</h3>
+            <p>Portal empresarial B2B con catálogo técnico, cotizador interactivo y optimización SEO regional.</p>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="ecommerce">
+          <div class="project-preview preview-2">
+            <div class="browser-mock">
+              <div class="mock-bar"><span></span><span></span><span></span></div>
+              <div class="mock-content grid-mock">
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">E-Commerce</span>
+            <h3>Tienda Oficial Aurum Store</h3>
+            <p>Tienda online de alto rendimiento con checkout en un solo paso e integración logística automatizada.</p>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="sistema">
+          <div class="project-preview preview-3">
+            <div class="browser-mock">
+              <div class="mock-bar"><span></span><span></span><span></span></div>
+              <div class="mock-content dash-mock">
+                <div class="mock-sidebar"></div>
+                <div class="mock-main">
+                  <div class="mock-chart"></div>
+                  <div class="mock-line w-80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Sistema Cloud</span>
+            <h3>NovaPanel ERP &amp; Reservas</h3>
+            <p>Plataforma web en la nube para gestión de clientes, facturación electrónica y reportes en vivo.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section class="section section-light" id="planes">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">INVERSIÓN TRANSPARENTE</span>
+        <h2>Planes diseñados para crecer</h2>
+        <p>Elige el paquete que mejor se adapte a la etapa actual de tu negocio o solicita una cotización personalizada.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <div class="price-head">
+            <h3>Landing Page</h3>
+            <p>Ideal para campañas, lanzamientos y profesionales.</p>
+          </div>
+          <div class="price-amount">
+            <span class="currency">$</span>4,900 <span class="period">MXN</span>
+          </div>
+          <ul class="price-features">
+            <li>Diseño web moderno de 1 página</li>
+            <li>100% adaptable a móviles y tablets</li>
+            <li>Botón directo a WhatsApp y formulario</li>
+            <li>Certificado SSL de seguridad incluido</li>
+            <li>Optimización básica de velocidad</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline btn-block select-plan" data-plan="Landing Page">Seleccionar
+            Plan</a>
+        </div>
+
+        <div class="price-card featured reveal">
+          <div class="popular-badge">MÁS SOLICITADO</div>
+          <div class="price-head">
+            <h3>Web Empresarial</h3>
+            <p>Para empresas que buscan autoridad y captación constante.</p>
+          </div>
+          <div class="price-amount">
+            <span class="currency">$</span>9,500 <span class="period">MXN</span>
+          </div>
+          <ul class="price-features">
+            <li>Hasta 6 secciones personalizadas</li>
+            <li>Diseño UI/UX exclusivo Nova Web</li>
+            <li>Optimización SEO técnico en Google</li>
+            <li>Panel administrable de contenidos</li>
+            <li>Integración con Google Analytics y Maps</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary btn-block select-plan" data-plan="Web Empresarial">Seleccionar
+            Plan</a>
+        </div>
+
+        <div class="price-card reveal">
+          <div class="price-head">
+            <h3>E-Commerce / Medida</h3>
+            <p>Para tiendas en línea o sistemas con funciones avanzadas.</p>
+          </div>
+          <div class="price-amount">
+            <span class="currency">$</span>16,900 <span class="period">MXN</span>
+          </div>
+          <ul class="price-features">
+            <li>Catálogo ilimitado de productos</li>
+            <li>Pasarelas de pago integradas</li>
+            <li>Gestión de pedidos e inventario</li>
+            <li>Arquitectura cloud escalable</li>
+            <li>Capacitación y soporte prioritario</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline btn-block select-plan" data-plan="E-Commerce / Medida">Seleccionar
+            Plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section-dark" id="contacto">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow">HABLEMOS DE TU PROYECTO</span>
+        <h2>Lleva tu presencia digital al siguiente nivel con <span class="text-gradient">Nova Web</span></h2>
+        <p>Cuéntanos qué tienes en mente y nuestro equipo te enviará una propuesta estratégica sin compromiso en menos
+          de 24 horas.</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="c-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <strong>Correo Electrónico</strong>
+              <span>contacto@novaweb.mx</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="c-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <strong>Teléfono / WhatsApp</strong>
+              <span>+52 (81) 0000 0000</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="c-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <strong>Ubicación</strong>
+              <span>Monterrey, Nuevo León, México</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="quoteForm">
+        <h3>Solicita tu cotización</h3>
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Mendoza" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="correo@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="81 1234 5678" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="servicio">Servicio o plan de interés</label>
+          <select id="servicio" name="servicio">
+            <option value="Landing Page">Plan Landing Page</option>
+            <option value="Web Empresarial" selected>Plan Web Empresarial</option>
+            <option value="E-Commerce / Medida">E-Commerce / Sistema a la Medida</option>
+            <option value="SEO y Branding">Posicionamiento SEO &amp; Branding</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Cuéntanos sobre tu proyecto</label>
+          <textarea id="mensaje" name="mensaje" rows="4"
+            placeholder="Describe brevemente qué necesitas para tu sitio web..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar solicitud</button>
+        <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
       </form>
-      <p>
-        <a href="https://wa.me/52XXXXXXXXXX">WhatsApp</a> ·
-        <a href="https://github.com/usuario">GitHub</a> ·
-        <a href="mailto:correo@ejemplo.com">Correo</a>
-      </p>
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Tu Nombre</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-text">Nova <span>Web</span></span>
+        <p>Desarrollo web profesional, arquitectura cloud y estrategias digitales de alto rendimiento.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Nova Web. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
+
 </html>
